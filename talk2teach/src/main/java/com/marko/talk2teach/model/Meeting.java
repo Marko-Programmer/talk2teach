@@ -1,9 +1,7 @@
 package com.marko.talk2teach.model;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
@@ -11,19 +9,18 @@ import java.time.LocalDateTime;
 @Table(name = "meetings")
 @NoArgsConstructor
 @AllArgsConstructor
-@Data
+@Getter
+@Setter
 public class Meeting {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private LocalDateTime startDateTime;
-    private LocalDateTime endDateTime;
 
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "teacher_id", nullable = false)
-    private TeacherProfile teacher;
+    @JoinColumn(name = "time_slot_id", nullable = false)
+    private TimeSlot timeSlot;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id", nullable = false)
@@ -33,12 +30,16 @@ public class Meeting {
     @JoinColumn(name = "child_id", nullable = false)
     private Child child;
 
+
+
     @Column(columnDefinition = "TEXT")
     private String message;
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
     private Status status = Status.PLANNED;
+
+
 
     @Column(updatable = false)
     private LocalDateTime createdAt;

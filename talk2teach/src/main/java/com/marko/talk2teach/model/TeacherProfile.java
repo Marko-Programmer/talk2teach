@@ -1,10 +1,9 @@
 package com.marko.talk2teach.model;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotEmpty;
 import lombok.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -18,13 +17,11 @@ public class TeacherProfile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    ArrayList<?> idd = new ArrayList<>();
+    @NotEmpty
+    private List<String> classRoom;
 
-    @NotBlank
-    private ArrayList<String> classRoom;
-
-    @NotBlank
-    private ArrayList<String> subject;
+    @NotEmpty
+    private List<String> subjects;
 
     private String homeroomClass;
 
