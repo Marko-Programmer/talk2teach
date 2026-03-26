@@ -3,7 +3,7 @@ package com.marko.talk2teach.dto.meeting;
 
 import jakarta.validation.constraints.NotNull;
 
-public record MeetingCreateRequest(
+public record MeetingRequest(
         @NotNull Long timeSlotId,
         @NotNull Long childId,
 

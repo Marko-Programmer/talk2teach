@@ -1,5 +1,8 @@
 package com.marko.talk2teach.dto.meeting;
 
+import com.marko.talk2teach.dto.child.ChildResponse;
+import com.marko.talk2teach.dto.parent.ParentInfoResponse;
+import com.marko.talk2teach.dto.teacher.TeacherInfoResponse;
 import com.marko.talk2teach.dto.timeslot.TimeSlotResponse;
 import com.marko.talk2teach.model.Status;
 
@@ -12,7 +15,7 @@ public record MeetingResponse(
         TimeSlotResponse timeSlotResponse,
         TeacherInfoResponse teacher,
         ParentInfoResponse parent,
-        ChildInfoResponse child,
+        ChildResponse child,
 
         String message,
         Status status,

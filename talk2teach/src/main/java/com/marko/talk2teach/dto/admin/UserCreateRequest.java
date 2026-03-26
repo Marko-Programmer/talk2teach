@@ -1,4 +1,4 @@
-package com.marko.talk2teach.dto.register;
+package com.marko.talk2teach.dto.admin;
 
 import com.marko.talk2teach.model.Role;
 import jakarta.validation.constraints.NotBlank;
@@ -16,5 +16,4 @@ public record UserCreateRequest(
 
         @NotNull
         Role role
-) {
-}
+) {}

@@ -1,11 +1,11 @@
-package com.marko.talk2teach.dto.register;
+package com.marko.talk2teach.dto.teacher;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 
 import java.util.List;
 
-public record RegisterTeacherRequest(
+public record TeacherRegisterRequest(
         @NotBlank String fullName,
         String email,
         String phone,

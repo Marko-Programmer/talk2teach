@@ -1,4 +1,4 @@
-package com.marko.talk2teach.dto.meeting;
+package com.marko.talk2teach.dto.parent;
 
 public record ParentInfoResponse(
         Long id,

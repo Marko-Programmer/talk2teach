@@ -1,4 +1,4 @@
-package com.marko.talk2teach.dto.register;
+package com.marko.talk2teach.dto.child;
 
 import jakarta.validation.constraints.NotBlank;
 

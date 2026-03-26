@@ -1,11 +1,12 @@
-package com.marko.talk2teach.dto.profile;
+package com.marko.talk2teach.dto.teacher;
 
 import java.util.List;
 
 public record TeacherProfileResponse(
-        Long id,
+        Long userId,
         String username,
 
+        Long profileId,
         String fullName,
         String email,
         String phone,

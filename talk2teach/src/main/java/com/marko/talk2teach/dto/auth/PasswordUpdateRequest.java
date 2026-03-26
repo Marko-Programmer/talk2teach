@@ -1,4 +1,4 @@
-package com.marko.talk2teach.dto.profile;
+package com.marko.talk2teach.dto.auth;
 
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
