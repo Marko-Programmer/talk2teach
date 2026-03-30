@@ -1,6 +1,7 @@
 package com.marko.talk2teach.mapper;
 
-import com.marko.talk2teach.dto.admin.UserCreateRequest;
+import com.marko.talk2teach.dto.user.UserCreateRequest;
+import com.marko.talk2teach.dto.user.UserResponse;
 import com.marko.talk2teach.model.User;
 import org.springframework.stereotype.Component;
 
@@ -13,6 +14,14 @@ public class UserMapper {
         user.setPassword(userCreateRequest.password());
         user.setRole(userCreateRequest.role());
         return user;
+    }
+
+    public UserResponse toResponse(User user){
+        return new UserResponse(
+          user.getId(),
+                user.getUsername(),
+                user.getRole()
+        );
     }
 
     public User toAddBaseInfo(String fullName, String email, String phone) {

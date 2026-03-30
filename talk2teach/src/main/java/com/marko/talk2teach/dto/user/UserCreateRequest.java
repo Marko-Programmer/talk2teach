@@ -1,4 +1,4 @@
-package com.marko.talk2teach.dto.admin;
+package com.marko.talk2teach.dto.user;
 
 import com.marko.talk2teach.model.Role;
 import jakarta.validation.constraints.NotBlank;
