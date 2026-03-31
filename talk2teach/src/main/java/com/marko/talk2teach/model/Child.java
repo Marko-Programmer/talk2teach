@@ -22,7 +22,7 @@ public class Child {
     private String classGroup;
 
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "parent_id", nullable = false)
     @ToString.Exclude
     @EqualsAndHashCode.Exclude

@@ -1,5 +1,6 @@
 package com.marko.talk2teach.model;
 
+import jakarta.annotation.Nullable;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
@@ -28,6 +29,7 @@ public class TimeSlot {
     @NotBlank
     private String classRoom;
 
+    @Column(nullable = false)
     private Boolean isBooked = false;
 
     @ManyToOne(fetch = FetchType.LAZY)

@@ -19,6 +19,10 @@ public class MeetingMapper {
     private final ChildMapper childMapper;
 
     public Meeting toMeeting(MeetingRequest request, TimeSlot slot, ParentProfile parent, Child child) {
+        if (request == null || slot == null || parent == null) {
+            return null;
+        }
+
         Meeting meeting = new Meeting();
         meeting.setTimeSlot(slot);
         meeting.setParent(parent);
